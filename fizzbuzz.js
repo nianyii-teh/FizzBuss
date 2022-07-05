@@ -2,7 +2,7 @@
 function fizzbuzz() {
     
     // Put your code here...
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 1; i <= 300; i++) {
         let arr = new Array();
         
         // Multiple of 11
@@ -34,6 +34,20 @@ function fizzbuzz() {
                 arr.splice(j, 0, 'F', 'e', 'z', 'z');
             } else {
                 arr = arr.concat("Fezz".split(''));
+            }
+        }
+
+        // Multiple of 17
+        if (i % 17 == 0) {
+            
+            if (arr.length != 0) {
+                let tmp = new Array();
+
+                for (let k = (arr.length / 4) - 1; k >= 0; k--) {
+                    tmp = tmp.concat(arr.slice(k*4, (k+1)*4));
+                }
+
+                arr = tmp;
             }
         }
 
