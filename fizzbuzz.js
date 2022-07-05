@@ -15,6 +15,11 @@ function fizzbuzz() {
             arr = arr.concat("Buzz".split(''));
         }
 
+        // Multiple of 7
+        if (i % 7 == 0) {
+            arr = arr.concat("Bang".split(''));
+        }
+
         // Check if i is multiple of anything
         if (arr.length == 0) {
             console.log(i);
