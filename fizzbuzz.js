@@ -26,6 +26,17 @@ function fizzbuzz() {
             arr = arr.concat("Bang".split(''));
         }
 
+        // Multiple of 13
+        if (i % 13 == 0) {
+            const j = arr.indexOf('B');
+
+            if (j != -1) {
+                arr.splice(j, 0, 'F', 'e', 'z', 'z');
+            } else {
+                arr = arr.concat("Fezz".split(''));
+            }
+        }
+
         // Check if i is multiple of anything
         if (arr.length == 0) {
             console.log(i);
