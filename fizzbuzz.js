@@ -5,6 +5,12 @@ function fizzbuzz() {
     for (let i = 1; i <= 100; i++) {
         let arr = new Array();
         
+        // Multiple of 11
+        if (i % 11 == 0) {
+            console.log("Bong");
+            continue;
+        } 
+        
         // Multiple of 3
         if (i % 3 == 0) {
             arr = arr.concat("Fizz".split(''));
